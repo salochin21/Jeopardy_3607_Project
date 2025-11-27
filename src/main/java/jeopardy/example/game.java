@@ -67,7 +67,10 @@ public class game {
                 logger.logEvent("", "Questions Loaded from Json", "", "", "", "", filepath);
                 break;
             case "2":
-                
+                logger.logEvent("", "STRATEGY_SELECTED:CSV", ",", ",", ",", ",", ",");
+                strategy = new CSVLoader(filepath);
+                System.out.println("Questions will be loaded from CSV.");
+                logger.logEvent("", "Questions Loaded from CSV", "", "", "", "", filepath);
                 break;
             default:
                 System.out.println("Invalid option. Please try again.");
@@ -86,3 +89,4 @@ public class game {
         return playersStore;
     }
 }
+
